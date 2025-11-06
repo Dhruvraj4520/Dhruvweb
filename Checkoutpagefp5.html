@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: #f9c600;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .logo {
+      height: 30px;
+    }
+
+    .checkout-steps {
+      display: flex;
+      gap: 25px;
+      font-weight: bold;
+    }
+
+    .checkout-steps span::after {
+      content: ' \2192';
+      margin-left: 5px;
+    }
+
+    .checkout-steps span:last-child::after {
+      content: '';
+    }
+
+    .secure-checkout {
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .form-section {
+      flex: 2;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-section h2 {
+      margin-bottom: 25px;
+      color: #222;
+    }
+
+    .shipping-form label {
+      display: block;
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+
+    .shipping-form input,
+    .shipping-form select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-top: 5px;
+      font-size: 14px;
+    }
+
+    .shipping-form .row {
+      display: flex;
+      gap: 15px;
+    }
+
+    .shipping-form .row>div {
+      flex: 1;
+    }
+
+    .shipping-form button {
+      background: #000;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .summary-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .summary-box,
+    .gift-options,
+    .live-chat {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .summary-box p,
+    .summary-box .total {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .summary-box .total {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .gift-options {
+      font-weight: bold;
+    }
+
+    .extra-links {
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .extra-links a {
+      color: #007bff;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    .live-chat {
+      font-size: 14px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" class="logo">
+    <div class="checkout-steps">
+      <span>SHIPPING</span>
+      <span>PAYMENT</span>
+      <span>REVIEW & SUBMIT</span>
+    </div>
+    <div class="secure-checkout">Secure Checkout 🛒</div>
+  </header>
+
+  <main class="container">
+    <section class="form-section">
+      <h2>Shipping Address</h2>
+      <form id="checkoutForm" class="shipping-form">
+        <label for="country">Country</label>
+        <select name="country" id="country">
+          <option value="">--Select Country--</option>
+          <option value="India">India</option>
+          <option value="Afghanistan">Afghanistan</option>
+          <option value="Australia">Australia</option>
+          <option value="Belize">Belize</option>
+          <option value="Bangladesh">Bangladesh</option>
+          <option value="Mexico">Mexico</option>
+          <option value="New Zealand">New Zealand</option>
+          <option value="Canada">Canada</option>
+          <option value="Oman">Oman</option>
+          <option value="Pakistan">Pakistan</option>
+          <option value="China">China</option>
+          <option value="Colombia">Colombia</option>
+          <option value="Papua New Guinea">Papua New Guinea</option>
+          <option value="Portugal">Portugal</option>
+          <option value="Russia">Russia</option>
+          <option value="Egypt">Egypt</option>
+          <option value="Saudi Arabia">Saudi Arabia</option>
+          <option value="Singapore">Singapore</option>
+          <option value="France">France</option>
+          <option value="South Africa">South Africa</option>
+          <option value="Sri Lanka">Sri Lanka</option>
+          <option value="Germany">Germany</option>
+          <option value="United Kingdom">United Kingdom</option>
+        </select><br><br>
+
+
+        <div class="row">
+          <div>
+            <label>First Name
+              <input type="text" name="fname" required>
+            </label>
+          </div>
+          <div>
+            <label>Last Name
+              <input type="text" name="lname" required>
+            </label>
+          </div>
+        </div>
+
+        <label>Address 1
+          <input type="text" name="address1" placeholder="Street Address" required>
+        </label>
+
+        <label>Address 2
+          <input type="text" name="address2" placeholder="Apartment, Floor">
+        </label>
+
+        <div class="row">
+          <div>
+            <label>Zip
+              <input type="text" name="zip">
+            </label>
+          </div>
+          <div>
+            <label>City
+              <input type="text" name="city" placeholder="City">
+            </label>
+          </div>
+          <div>
+            <label for="state">State</label>
+            <select name="state" id="state">
+              <option value="">--Select State--</option>
+              <option value="Gujarat">Gujarat</option>
+              <option value="Andhra Pradesh">Andhra Pradesh</option>
+              <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+              <option value="Assam">Assam</option>
+              <option value="Bihar">Bihar</option>
+              <option value="Chhattisgarh">Chhattisgarh</option>
+              <option value="Goa">Goa</option>
+              <option value="Haryana">Haryana</option>
+              <option value="Himachal Pradesh">Himachal Pradesh</option>
+              <option value="Jharkhand">Jharkhand</option>
+              <option value="Karnataka">Karnataka</option>
+              <option value="Kerala">Kerala</option>
+              <option value="Madhya Pradesh">Madhya Pradesh</option>
+              <option value="Maharashtra">Maharashtra</option>
+              <option value="Manipur">Manipur</option>
+              <option value="Meghalaya">Meghalaya</option>
+              <option value="Mizoram">Mizoram</option>
+              <option value="Nagaland">Nagaland</option>
+              <option value="Odisha">Odisha</option>
+              <option value="Punjab">Punjab</option>
+              <option value="Rajasthan">Rajasthan</option>
+              <option value="Sikkim">Sikkim</option>
+              <option value="Tamil Nadu">Tamil Nadu</option>
+              <option value="Telangana">Telangana</option>
+              <option value="Tripura">Tripura</option>
+              <option value="Uttar Pradesh">Uttar Pradesh</option>
+              <option value="Uttarakhand">Uttarakhand</option>
+              <option value="West Bengal">West Bengal</option>
+            </select>
+
+          </div>
+        </div>
+
+        <label>Phone
+          <input type="text" name="phone">
+        </label>
+
+        <label>Email
+          <input type="email" name="email" placeholder="To Receive Order">
+        </label>
+
+        <button type="button" id="placeOrderBtn">Submit & Continue</button>
+      </form>
+    </section>
+
+    <aside class="summary-section">
+      <div class="summary-box">
+        <p><strong>Subtotal:</strong> <span>$67.11</span></p>
+        <p><strong>Shipping:</strong> <span>Enter Address</span></p>
+        <p><strong>Duties & Taxes:</strong> <span>Delivery</span></p>
+        <hr>
+        <p class="total"><strong>You Pay:</strong> <span>$67.11</span></p>
+      </div>
+      <div class="gift-options">🎁 Select Gift Options</div>
+      <div class="extra-links">
+        <a href="#">Return Policy</a> | <a href="#">Payment Options</a>
+      </div>
+      <div class="live-chat">
+        💬 LIVE CHAT<br>
+        <small>Your Cart ID #477 515 809 20</small>
+      </div>
+    </aside>
+  </main>
+
+  <script>
+    document.getElementById("placeOrderBtn").addEventListener("click", function (e) {
+      e.preventDefault(); // 🚫 Stop form from reloading page
+
+      const form = document.getElementById("checkoutForm");
+      const formData = new FormData(form);
+
+      // Validate
+      for (let [key, value] of formData.entries()) {
+        if (value.trim() === "") {
+          alert("⚠️ Please fill all fields before continuing!");
+          return;
+        }
+      }
+
+      const btn = document.getElementById("placeOrderBtn");
+      btn.disabled = true;
+      btn.innerText = "Processing...";
+
+      fetch("save_data.php", {
+        method: "POST",
+        body: formData
+      })
+        .then(res => res.text())
+        .then(data => {
+          console.log("Server Response:", data); // for debugging
+          if (data.trim() === "success") {
+            window.location.href = "finalpagefp5.html"; // ✅ Redirect now works
+          } else {
+            alert("❌ Data not inserted! Please try again.");
+            btn.disabled = false;
+            btn.innerText = "Submit & Continue";
+          }
+        })
+        .catch(err => {
+          alert("⚠️ Server error! Please check your connection.");
+          console.error(err);
+          btn.disabled = false;
+          btn.innerText = "Submit & Continue";
+        });
+    });
+  </script>
+</body>
+
+</html>

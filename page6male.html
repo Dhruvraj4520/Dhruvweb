@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Nike IsoFly</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #fcf000;
+      color: #000;
+      font-size: 18px;
+      /* increased from default */
+    }
+
+
+    header {
+      background-color: #fefefe;
+      padding: 10px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      height: 30px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #000;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .product {
+      display: flex;
+      justify-content: space-between;
+      padding: 50px;
+      gap: 40px;
+    }
+
+    .details {
+      flex: 1;
+      max-width: 600px;
+    }
+
+    .details h1 {
+      font-family: 'Alfa Slab One', cursive;
+      font-size: 48px;
+      /* increased */
+      margin-bottom: 15px;
+    }
+
+
+    .type {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .price {
+      font-size: 32px;
+      /* increased */
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: green;
+    }
+
+    .colors {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .color {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+
+    .color.red {
+      background-color: red;
+    }
+
+    .color.green {
+      background-color: green;
+    }
+
+    .color.yellow {
+      background-color: yellow;
+    }
+
+    .color.active {
+      border-color: #000;
+    }
+
+    .sizes p {
+      margin-bottom: 5px;
+    }
+
+    .sizes button {
+      margin: 0 8px 12px 0;
+      padding: 10px 16px;
+      /* increased */
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+
+    .sizes button.active {
+      background: #000;
+      color: #fff;
+    }
+
+    .add-to-cart {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #28a733;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+
+
+    .image-area {
+      flex: 1;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .shoe-img {
+      width: 100%;
+      max-width: 00px;
+      /* increased from 400px */
+    }
+
+
+    .dots {
+      margin-top: 100px;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+    }
+
+
+    .dots span {
+      width: 10px;
+      height: 10px;
+      background: #000;
+      border-radius: 50%;
+      opacity: 0.3;
+    }
+
+    .product {
+      display: flex;
+      justify-content: space-between;
+      padding: 80px;
+      /* increased from 50px */
+      gap: 60px;
+    }
+
+    .dots .active {
+      opacity: 1;
+    }
+
+    .shoe-img {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .shoe-img {
+      width: 100%;
+      max-width: 500px;
+      transform: scale(1.2);
+      border-radius: 20px;
+      /* 🔴 This adds rounded corners */
+    }
+
+    .image-area {
+      flex: 1.2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike Logo" class="logo">
+    <nav>
+      <a href="productmale.html">MEN</a>
+      <a href="productfemale.html">WOMEN</a>
+      <a href="category.html">HOME</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="product">
+      <div class="details">
+        <h1><span>Nike IsoFly</span><br>HIGH</h1>
+        <p class="type">MEN SHOE</p>
+        <p class="description">
+          Lace up with the Kids' Nike Isofly Basketball Shoe to feel lightweight and bouncy when you play. Mesh upper in
+          a basketball shoe style with a round toe. Lace up front. Nike Swoosh detail on side. Heel pull tab. Soft
+          squishy foam helps cushion your feet while you play. Padded collar and tongue. Smooth lining with a padded
+          insole. Durable traction rubber outsole.
+
+        <div class="price">$ <span>89.99</span></div>
+
+        <div class="colors">
+          <span class="color red"></span>
+          <span class="color green"></span>
+          <span class="color yellow active"></span>
+        </div>
+
+        <div class="sizes">
+          <p>SIZE</p>
+          <button>5</button>
+          <button>6</button>
+          <button>7</button>
+          <button>8</button>
+          <button class="active">9</button>
+          <button>10</button>
+        </div>
+
+        <a href="Checkoutpagemp6.html" class="add-to-cart">ADD TO CART</a>
+
+      </div>
+
+      <div class="image-area">
+        <img src="NIKE+ISOFLY+(GS).avif" alt="Nike IsoFly" class="shoe-img">
+        <div class="dots">
+          <span></span>
+          <span class="active"></span>
+          <span></span>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

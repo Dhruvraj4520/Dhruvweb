@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NIKE | Men’s Shoes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --main-color: #fdf733;
+      --text-dark: #111;
+      --accent: #e60023;
+      --disabled: #bcbcbc;
+      --card-bg: #fffdee;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background-color: var(--main-color);
+      color: var(--text-dark);
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--main-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 24px;
+    }
+
+    .logo img {
+      width: 42px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    nav a.disabled {
+      color: var(--disabled);
+      pointer-events: none;
+    }
+
+    .right-nav {
+      display: flex;
+      gap: 20px;
+      font-weight: 600;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    .category-title {
+      padding: 40px 40px 10px;
+      font-size: 26px;
+      font-weight: 700;
+    }
+
+    .pagination {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 0 40px 30px;
+      font-size: 16px;
+      flex-wrap: wrap;
+    }
+
+    .pagination span {
+      padding: 6px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .pagination .active {
+      background-color: var(--text-dark);
+      color: white;
+    }
+
+    .pagination span:hover:not(.active) {
+      background-color: #eee;
+    }
+
+    .filters {
+      margin-left: auto;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--text-dark);
+      background-color: white;
+      padding: 6px 14px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s;
+    }
+
+    .filters:hover {
+      background-color: #f4f4f4;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 40px;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border-radius: 20px;
+      padding: 20px;
+      text-align: center;
+      color: inherit;
+      text-decoration: none;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      font-weight: 500;
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+
+    .card strong {
+      font-size: 18px;
+      color: var(--accent);
+    }
+
+    @media (max-width: 768px) {
+
+      .navbar,
+      .category-title,
+      .pagination {
+        padding: 20px;
+      }
+
+      .right-nav {
+        display: none;
+      }
+
+      .card img {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike" />
+      <span>NIKE</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="productmale.html">Mens</a></li>
+        <li><a href="productfemale.html">Womens</a></li>
+        <li><a href="category.html">Home</a></li>
+      </ul>
+    </nav>
+    <div class="right-nav">
+      <span>MY ACCOUNT</span>
+      <span>🛒</span>
+    </div>
+  </header>
+
+  <section class="category-title">
+    <h2>MEN’S SHOES</h2>
+  </section>
+
+  <div class="pagination">
+    <span class="active">1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+    <span>&gt;</span>
+    <a href="filtermale.html" class="filters">Filters</a>
+  </div>
+
+  <section class="products">
+    <a href="page1male.html" class="card">
+      <img src="download (6).jpeg" alt="Nike Air Jordan 1" />
+      <p>Nike Air Jordan 1</p>
+      <strong>$210</strong>
+    </a>
+    <a href="page2male.html" class="card">
+      <img src="W+NIKE+VOMERO+18.avif" alt="Nike Running Shoes" />
+      <p>Nike Running Shoes</p>
+      <strong>$178</strong>
+    </a>
+    <a href="page3male.html" class="card">
+      <img src="AIR+FORCE+1+'07.avif" alt="Nike Air Max" />
+      <p>Nike Air Max</p>
+      <strong>$99.00</strong>
+    </a>
+    <a href="page4male.html" class="card">
+      <img src="nike-sneakers-500x500.webp" alt="Nike Sneaker" />
+      <p>Nike Sneaker</p>
+      <strong>$190</strong>
+    </a>
+    <a href="page5male.html" class="card">
+      <img src="AIR+TRAINER+1.avif" alt="Nike Air Trainer" />
+      <p>Nike Air Trainer</p>
+      <strong>$100.99</strong>
+    </a>
+    <a href="page6male.html" class="card">
+      <img src="NIKE+ISOFLY+(GS).avif" alt="Nike IsoFly" />
+      <p>Nike IsoFly</p>
+      <strong>$89.99</strong>
+    </a>
+  </section>
+</body>
+
+</html>

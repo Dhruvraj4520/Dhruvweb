@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Review & Submit Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: #f9c600;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .logo {
+      height: 30px;
+    }
+
+    .checkout-steps {
+      display: flex;
+      gap: 25px;
+      font-weight: bold;
+    }
+
+    .checkout-steps span::after {
+      content: ' \2192';
+      margin-left: 5px;
+    }
+
+    .checkout-steps span:last-child::after {
+      content: '';
+    }
+
+    .secure-checkout {
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .success-icon {
+      font-size: 60px;
+      color: green;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .order-summary {
+      text-align: left;
+      margin-top: 20px;
+      border-top: 1px solid #ddd;
+      padding-top: 20px;
+    }
+
+    .order-summary h2 {
+      margin-bottom: 10px;
+    }
+
+    .order-summary p {
+      margin: 5px 0;
+    }
+
+    .home-button {
+      margin-top: 30px;
+      background: #000;
+      color: #fff;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" class="logo">
+    <div class="checkout-steps">
+      <span>SHIPPING</span>
+      <span>PAYMENT</span>
+      <span>REVIEW & SUBMIT</span>
+    </div>
+    <div class="secure-checkout">Secure Checkout ✅</div>
+  </header>
+
+  <div class="container">
+    <div class="success-icon">✔️</div>
+    <h1>Order Confirmed!</h1>
+    <p>Thank you for your purchase. Your order has been successfully placed and is being processed.</p>
+
+    <div class="order-summary">
+      <h2>Order Summary</h2>
+      <p><strong>Order ID:</strong> #47751580925</p>
+      <p><strong>Total Paid:</strong> $100.99</p>
+      <p><strong>Shipping To:</strong> *******************</p>
+      <p><strong>Email:</strong>*******************</p>
+    </div>
+
+    <a href="productmale.html" class="home-button">Return to Home</a>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Support</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff94f;
+      color: #111;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 60px;
+    }
+
+    .logo {
+      width: 50px;
+    }
+
+    .menu-icon {
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* Main Section */
+    .main-content {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      padding: 60px 100px;
+      gap: 60px;
+    }
+
+    .left-section img {
+      width: 500px;
+      max-width: 100%;
+      border-radius: 20px;
+    }
+
+    .right-section {
+      max-width: 600px;
+    }
+
+    .right-section h1 {
+      font-size: 38px;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+
+    .right-section p {
+      font-size: 18px;
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    /* Contact */
+    .contact p {
+      font-size: 20px;
+      margin: 15px 0;
+    }
+
+    .contact i {
+      margin-right: 12px;
+      color: #000;
+    }
+
+    /* Footer Navigation */
+    .bottom-nav {
+      margin-top: auto;
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      padding: 25px 0;
+      background-color: transparent;
+    }
+
+    .bottom-nav i {
+      font-size: 26px;
+      cursor: pointer;
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="topbar">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike" class="logo">
+
+      <!-- ✅ WRAP the icon in an anchor tag -->
+      <a href="category.html">
+        <i class="fas fa-bars menu-icon"></i>
+      </a>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="left-section">
+        <img src="https://img.freepik.com/free-vector/customer-support-flat-illustration_23-2148887720.jpg"
+          alt="Support Image">
+      </div>
+
+      <div class="right-section">
+        <h1>CUSTOMER SUPPORT</h1>
+        <p><strong>Order Assistance:</strong> Help with product selection, placing orders, and payment issues.</p>
+        <p><strong>Shipping & Delivery Support:</strong> Track packages, change delivery details, or report issues.</p>
+        <p><strong>Returns & Refunds:</strong> Request returns and get smooth refunds.</p>
+        <p><strong>Product Info:</strong> Get help with size, specs, availability, usage.</p>
+        <p><strong>Technical Help:</strong> Get support for account, checkout, and navigation.</p>
+
+        <div class="contact">
+          <p><i class="fas fa-phone"></i> +91 7859888133</p>
+          <p><i class="fas fa-envelope"></i> dhruvlakum892@gmail.com</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bottom-nav">
+      <i class="fas fa-home"></i>
+      <i class="fas fa-th-large"></i>
+      <i class="fas fa-user"></i>
+    </footer>
+  </div>
+</body>
+
+</html>
